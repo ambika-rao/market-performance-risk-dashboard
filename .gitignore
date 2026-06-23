@@ -1,0 +1,85 @@
+# ============================================================
+# .gitignore
+# Market Performance & Risk Analysis Dashboard
+# ============================================================
+# This file tells Git which files and folders to NEVER track.
+# Without this, a single "git add ." would upload thousands of
+# library files (venv/) and compiled Python files (__pycache__/)
+# to GitHub — a red flag for anyone reviewing your repository.
+# ============================================================
+
+
+# ------------------------------------------------------------
+# Python virtual environment
+# ------------------------------------------------------------
+# The venv/ folder contains every installed library (yfinance,
+# pandas, matplotlib, etc.). It can be hundreds of MB and is
+# fully reproducible from requirements.txt — never commit it.
+# ------------------------------------------------------------
+venv/
+.venv/
+env/
+
+
+# ------------------------------------------------------------
+# Python compiled bytecode
+# ------------------------------------------------------------
+# Python compiles your .py files into .pyc bytecode files for
+# faster loading. These are machine-generated and change every
+# time you run the code — they add noise to your git history
+# and mean nothing to anyone reading your project.
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+
+# ------------------------------------------------------------
+# Generated output files
+# ------------------------------------------------------------
+# Charts and CSVs are produced by running main.py — they're
+# outputs, not source code. We ignore them by file type so
+# that the .gitkeep placeholder files in each folder are
+# still tracked (keeping the directory structure visible on
+# GitHub for anyone who clones the repo).
+# ------------------------------------------------------------
+outputs/charts/*.png
+outputs/data/*.csv
+
+
+# ------------------------------------------------------------
+# macOS system files
+# ------------------------------------------------------------
+# macOS creates hidden .DS_Store files in every folder you open
+# in Finder. These are purely local metadata and pollute repos.
+# ------------------------------------------------------------
+.DS_Store
+**/.DS_Store
+
+
+# ------------------------------------------------------------
+# IDE and editor files
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# ------------------------------------------------------------
+# Environment variable files
+# ------------------------------------------------------------
+# If you ever add API keys (e.g. Alpha Vantage, Bloomberg),
+# store them in a .env file — and NEVER commit that file.
+# This line ensures you can't accidentally expose credentials.
+# ------------------------------------------------------------
+.env
+.env.*
+
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+*.log
+output.log
